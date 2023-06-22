@@ -36,6 +36,6 @@ jobs:
     #  - name: trigger the workflow
      #   run: |
      #     -u ${{ env.pat_token }}
-      - name: Test
-      echo: "Hi Vishwanath"
+     # - name: Test
+     # echo: "Hi Vishwanath"
       
