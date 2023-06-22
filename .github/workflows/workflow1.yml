@@ -21,13 +21,21 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env: 
+      pat_token: ${{ secrets.ACTION_KEY }}
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: Test
-        run: |
-          curl -X POST https://api.github.com/repos/:vkele12/:repo1/dispatches \
-          -H 'Accept: application/vnd.github.everest-preview+json' \
-          -u ${{ secrets.ACTION_KEY }} \
-          --data '{"event_type": "Trigger Workflow", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'" }}'
+     # - name: Test
+     #   run: |
+      #    curl -X POST https://api.github.com/repos/:vkele12/:repo1/dispatches \
+       #   -H 'Accept: application/vnd.github.everest-preview+json' \
+       #   -u ${{ secrets.ACTION_KEY }} \
+       #   --data '{"event_type": "Trigger Workflow", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'" }}'
       - uses: actions/checkout@v3
+      - name: trigger the workflow
+        run: |
+          -u ${{ env.pat_token }}
+      - name: Test
+      echo: "Hi Vishwanath"
+      
