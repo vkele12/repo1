@@ -33,9 +33,4 @@ jobs:
           -u ${{ secrets.ACTION_KEY }} \
           --data '{"event_type": "Trigger Workflow", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'" }}'
       - uses: actions/checkout@v3
-    #  - name: trigger the workflow
-     #   run: |
-     #     -u ${{ env.pat_token }}
-     # - name: Test
-     # echo: "Hi Vishwanath"
-      
+   
