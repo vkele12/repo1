@@ -1,11 +1,11 @@
-name: workflow_01
+name: workflow1
 on:
   workflow_dispatch:
      inputs:
       workflow_02:
         description: 'ًWorkflow 2 which will be triggered'
         required: true
-        default: 'workflow_02'
+        default: 'workflow2'
 
       workflow2_github_account:
         description: 'GitHub Account Owner'
