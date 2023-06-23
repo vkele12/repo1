@@ -31,4 +31,4 @@ jobs:
           --data '{"event_type": "Trigger Workflow", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'" }}'
       - uses: actions/checkout@v3
       - name: display message
-         echo " Hi Vishwanath "
+        run:  echo " Hi Vishwanath "
