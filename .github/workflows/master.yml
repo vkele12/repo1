@@ -7,7 +7,7 @@ on:
 jobs:
   build:
     name: Run API
-    runs-on: ununtu-latest
+    runs-on: ubuntu-latest
     steps:
      - name: Build API
        run: |
