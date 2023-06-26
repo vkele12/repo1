@@ -2,7 +2,7 @@ name: trigger
 
 on:
   schedule:
-    - cron:  '* * * * *'
+#    - cron:  '* * * * *'
 
   workflow_dispatch:
 
