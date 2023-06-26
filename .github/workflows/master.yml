@@ -6,10 +6,9 @@ on:
      - main
 jobs:
   build:
-    name: Run API
+    
     runs-on: ubuntu-latest
     steps:
-     - name: Build API
-       run: |
-        echo "Build API 123"
-        sleep 10s
+     - name: Display message
+       run: echo "Hello word"
+       
