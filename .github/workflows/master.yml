@@ -10,5 +10,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name: Display message
-       run: echo "Hello word"
+       run: echo "Hello word aaa"
        
