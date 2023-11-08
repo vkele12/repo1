@@ -1,0 +1,17 @@
+name: provision ec2
+on: 
+ workflow_dispatch:
+    input:
+     role_deployment_account_id:
+        description: ec2 name
+        required: true
+        type: number
+jobs:
+  provision_ec2:
+    runs-on: ubuntu-latest
+    steps: 
+      - uses: actions/checkout@v3
+      env:
+        varname : "${{ github.event.inputs.role_deployment_account_id }}"
+      
+ 
