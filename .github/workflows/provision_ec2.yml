@@ -33,13 +33,15 @@ jobs:
         id:   apply
         env:
           TF_VAR_ec2_name:  "${{ github.event.inputs.ec2_name }}"
-     - name: Update TF File
-       id:  change
+      - name: Update TF File
+        id:  change
+        env:
+          OUTPUT_VALUE: "${{ github.event.inputs.output_value }}"
         run: |
           # Set the new value using sed (or any other suitable command)
           sed -i "s/plx-user-management-deployment-roles/$OUTPUT_VALUE/" tf-example/output.tf
-        env:
-          OUTPUT_VALUE: "${{ github.event.inputs.output_value }}"
+       # env:
+       #   OUTPUT_VALUE: "${{ github.event.inputs.output_value }}"
          
        
        # run: |
