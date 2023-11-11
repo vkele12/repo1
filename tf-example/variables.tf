@@ -1,4 +1,4 @@
 variable "ec2_name" {
   type = string
-  default = 'Devops_techstack'
+  default = "default_instance_name"
 }
