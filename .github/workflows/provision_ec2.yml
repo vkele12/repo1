@@ -44,9 +44,9 @@ jobs:
        #   OUTPUT_VALUE: "${{ github.event.inputs.output_value }}"
          
        
-       # run: |
-       #   cd tf-example/
-       #   terraform init
-       #   terraform validate
-       #   terraform plan 
-       #   terraform apply -auto-approve -var "ec2_name=${{ github.event.inputs.ec2_name }}"
+        run: |
+          cd tf-example/
+          terraform init
+          terraform validate
+          terraform plan 
+          terraform apply -auto-approve -var "ec2_name=${{ github.event.inputs.ec2_name }}"
