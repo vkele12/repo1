@@ -39,7 +39,7 @@ jobs:
           # Set the new value using sed (or any other suitable command)
           sed -i "s/plx-user-management-deployment-roles/$OUTPUT_VALUE/" tf-example/output.tf
         env:
-          NEW_VALUE: "${{ github.event.inputs.output_value }}"
+          OUTPUT_VALUE: "${{ github.event.inputs.output_value }}"
          
        
        # run: |
